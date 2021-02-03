@@ -130,14 +130,19 @@ for (let i = 0; i < adalabers.length; i++) {
 }
 //    console.log(youngestName);
 
+
 // cuantas pintoras hay?
+function countPainters() {
 
 let counter = 0;
 for (const iqualJobs of adalabers) {
     if (iqualJobs.job === "painter") {
-        
         counter++;
-    }
-   
-}
-// console.log(adalabers[0].job);
+    };
+};
+return counter;
+};
+
+let numberPainters = countPainters();
+
+console.log(numberPainters);
