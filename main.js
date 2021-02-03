@@ -47,27 +47,25 @@
 
 // Ejercicio 6
 
-// const inputElement = document.querySelector('.js-input');
-// const buttonElement = document.querySelector('.js-button');
-// const arrayElement = [];
+const inputElement = document.querySelector('.js-input');
+const buttonElement = document.querySelector('.js-button');
+const arrayElement = [];
 
-// function handleButton() {
+function handleButton() {
 
     
-//     const valueElement = inputElement.value;
+    const valueElement = inputElement.value;
 
-//     arrayElement.push(valueElement);
-
-//     console.log(valueElement);
+    arrayElement.push(valueElement);
     
-//     for (const movie of arrayElement) {
-//         console.log(`${movie} 'favorita'`)
-//     }
-//  };
+    for (const movie of arrayElement) {
+        console.log(`Mi peli favorita es: ${movie}`)
+    };
+ };
 
 // console.log(arrayElement);
 
-// buttonElement.addEventListener('click', handleButton);
+buttonElement.addEventListener('click', handleButton);
 
 
 // Ejercicio 7
@@ -142,4 +140,4 @@ for (const iqualJobs of adalabers) {
     }
    
 }
-console.log(adalabers[0].job);
+// console.log(adalabers[0].job);
