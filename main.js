@@ -47,24 +47,99 @@
 
 // Ejercicio 6
 
-const inputElement = document.querySelector('.js-input');
-const buttonElement = document.querySelector('.js-button');
-const arrayElement = [];
+// const inputElement = document.querySelector('.js-input');
+// const buttonElement = document.querySelector('.js-button');
+// const arrayElement = [];
 
-function handleButton() {
+// function handleButton() {
 
     
-    const valueElement = inputElement.value;
+//     const valueElement = inputElement.value;
 
-    arrayElement.push(valueElement);
+//     arrayElement.push(valueElement);
 
-    console.log(valueElement);
+//     console.log(valueElement);
     
-    for (const movie of arrayElement) {
-        console.log(`${movie} 'favorita'`)
+//     for (const movie of arrayElement) {
+//         console.log(`${movie} 'favorita'`)
+//     }
+//  };
+
+// console.log(arrayElement);
+
+// buttonElement.addEventListener('click', handleButton);
+
+
+// Ejercicio 7
+
+const adalabers = [
+    {
+        name: 'Raquel',
+        age: 40,
+        job: 'painter',
+    },
+    {
+        name: 'Paula',
+        age: 38,
+        job: 'painter',
+    },
+    {
+        name: 'Rosa',
+        age: 20,
+        job: 'teacher',
     }
- };
+]
 
-console.log(arrayElement);
+function countAdalabers() {
+    return adalabers.length
+    
+};
 
-buttonElement.addEventListener('click', handleButton);
+const nroAdalabers = countAdalabers();
+// console.log(nroAdalabers);
+
+//---------------------
+
+function averageAge() {
+    let total = 0;
+
+for (let i = 0; i < adalabers.length; i++) {
+
+   total = total + adalabers[i].age;
+}
+let media = total/adalabers.length;
+    return media;
+}
+
+const average = averageAge();
+// console.log(average);
+
+//---------------------
+
+// theYoungest
+
+let youngest = adalabers[0].age;
+let youngestName = adalabers[0].name
+
+for (let i = 0; i < adalabers.length; i++) {
+
+
+        if (youngest > adalabers[i].age){
+          youngest = adalabers[i].age
+          youngestName = adalabers[i].name
+        }
+     
+}
+//    console.log(youngestName);
+
+// cuantas pintoras hay?
+
+let counter = 0;
+for (const iqualJobs of adalabers) {
+    if (iqualJobs.job === "painter") {
+        
+        counter++;
+    }
+   
+}
+console.log(adalabers[0].job);
