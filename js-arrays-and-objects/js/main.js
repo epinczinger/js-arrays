@@ -69,3 +69,14 @@ const promos = [
 const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
 // TÚ CÓDIGO AQUÍ
+
+const resultElement = document.querySelector('.js-result');
+
+let lis = '';
+
+for (const promo of promos) {
+
+ lis += `<li> ${promo.name} </li>`;
+  
+};
+ resultElement.innerHTML = `<ul>${lis} </ul>`;
