@@ -75,16 +75,20 @@ const resultElement = document.querySelector('.js-result');
 let lis = '';
 
 for (const promo of promos) {
-   
-    for (let index = 0; index < promo.students.length; index++) {
-      console.log(promo.students[index].name);
-    }
+  lis += "<li>";
+  lis += `<p> Nombre ${promo.name} </p>`;
+  lis += "<ul>";
 
-    lis += `<li>
- <p> Nombre ${promo.name} </p>
- <p> Promo ${promo.promo}</p>
- <p> Nro de Alumnas ${promo.students.length}</p>
- </li>`;
-  
-};
- resultElement.innerHTML = `<ul>${lis} </ul>`;
+  for (let index = 0; index < promo.students.length; index++) {
+    
+
+    lis += "<li>";
+    lis += `${promo.students[index].name}`;
+    lis += "</li>";
+  };
+    lis += "</ul>";
+    lis += `<p> Promo ${promo.promo}</p>`;
+    lis += `<p> Nro de Alumnas ${promo.students.length}</p>`;
+    lis += "</li>";
+  };
+  resultElement.innerHTML = `<ul>${lis} </ul>`;
