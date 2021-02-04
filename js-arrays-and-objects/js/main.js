@@ -70,8 +70,21 @@ const studentsWorkingInGoogle = ['id-2', 'id-3', 'id-5', 'id-9'];
 
 // TÚ CÓDIGO AQUÍ
 
-const resultElement = document.querySelector(".js-result");
+const resultElement = document.querySelector('.js-result');
 
-resultElement.innerHTML = `<ul>for (const promo of promos) {
-  <li> ${promo.name} </li>;
-} </ul>`;
+let lis = '';
+
+for (const promo of promos) {
+   
+    for (let index = 0; index < promo.students.length; index++) {
+      console.log(promo.students[index].name);
+    }
+
+    lis += `<li>
+ <p> Nombre ${promo.name} </p>
+ <p> Promo ${promo.promo}</p>
+ <p> Nro de Alumnas ${promo.students.length}</p>
+ </li>`;
+  
+};
+ resultElement.innerHTML = `<ul>${lis} </ul>`;
